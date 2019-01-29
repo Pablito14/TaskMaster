@@ -3,12 +3,12 @@ package com.example.taskmaster.Models;
 import android.support.annotation.NonNull;
 import java.util.ArrayList;
 
-@Entity
+//@Entity
 public class Project {
 
     /**Instance variables*/
-    @NonNull
-    @PrimaryKey(autoGenerate = true)
+//    @NonNull
+//    @PrimaryKey(autoGenerate = true)
     private long projectId;
     private String name;
     private String description;
