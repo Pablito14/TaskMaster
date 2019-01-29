@@ -1,4 +1,6 @@
-package com.example.taskmaster;
+package com.example.taskmaster.Models;
+
+import com.example.taskmaster.Models.Project;
 
 public class Task {
 
