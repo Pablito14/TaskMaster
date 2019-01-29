@@ -1,18 +1,20 @@
 package com.example.taskmaster.Models;
 
-import android.support.annotation.NonNull;
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.room.PrimaryKey;
 
 //@Entity
 public class Project {
 
     /**Instance variables*/
-//    @NonNull
-//    @PrimaryKey(autoGenerate = true)
+    @NonNull
+    @PrimaryKey(autoGenerate = true)
     private long projectId;
     private String name;
     private String description;
-//    private ArrayList<Task> Tasks;
+    private ArrayList<Task> Tasks;
 
     /**Constructors*/
     public Project(){}
