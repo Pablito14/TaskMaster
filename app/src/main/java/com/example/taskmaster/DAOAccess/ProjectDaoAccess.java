@@ -7,7 +7,8 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-import java.util.List;
+
+import java.util.ArrayList;
 
 @Dao
 public interface ProjectDaoAccess {
@@ -26,14 +27,14 @@ public interface ProjectDaoAccess {
 
     //update and exercise
     @Update
-    void update(Exercise exercise);
+    void update(Project project);
 
     //delete all exercises
-    @Query("DELETE FROM exercise")
+    @Query("DELETE FROM project")
     void deleteAll();
 
     //select all exercises
-    @Query("SELECT * FROM exercise ORDER BY nameOfExercise ASC")
-    List<Exercise> getAllExercises();
+    @Query("SELECT * FROM project ORDER BY name ASC")
+    ArrayList<Project> getAllExercises();
 
 }

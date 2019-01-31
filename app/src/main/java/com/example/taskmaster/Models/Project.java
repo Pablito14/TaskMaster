@@ -1,17 +1,18 @@
 package com.example.taskmaster.Models;
 
 import java.util.ArrayList;
-
 import androidx.annotation.NonNull;
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-//@Entity
+@Entity
 public class Project {
 
     /**Instance variables*/
     @NonNull
     @PrimaryKey(autoGenerate = true)
     private long projectId;
+    
     private String name;
     private String description;
     private ArrayList<Task> Tasks;
@@ -29,9 +30,10 @@ public class Project {
     public String getDescription(){return description;}
 
     /**Setters*/
-    public void setProjectId(@NonNull long projectId) {
-        this.projectId = projectId;
-    }
+    // should not be able to overwrite the generated id
+//    public void setProjectId(@NonNull long projectId) {
+//        this.projectId = projectId;
+//    }
 
     public void setName(String name) {
         this.name = name;
